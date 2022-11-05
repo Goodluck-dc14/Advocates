@@ -20,11 +20,13 @@ app.get("/", (req, res) => {
   try {
     res
       .status(200)
-      .json({ message: "Advocates Server is ready and working fine!" });
+      .json({ message: "Advocates Server is ready and working fine 🚀🚀🚀!" });
   } catch (error) {
     res.status(404).json({ message: "Error locating servers" });
   }
 });
+
+app.use("/advocates", require("./router/advocatesRouter"));
 
 app.listen(port, () => {
   console.log("\x1b[32m%s\x1b[0m", "App is 🏃‍♂️🏃‍♂️🏃‍♂️🏃‍♂️🏃‍♂️ on port " + port);
